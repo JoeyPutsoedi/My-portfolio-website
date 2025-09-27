@@ -1,3 +1,4 @@
 # My-portfolio-website
 
-UNDER DEVELOPMENt!
+UNDER DEVELOPMENT!
+Completion Status: 80%
