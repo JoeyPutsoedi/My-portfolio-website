@@ -277,9 +277,9 @@ nav p {
 }
 
 .workprojects {
-  height: 630px;
+  height: 500px;
   font-family: gothamB;
-  margin-bottom: 1em;
+
   width: 95vw;
   display: grid;
   grid-auto-columns: 1fr;
@@ -287,9 +287,7 @@ nav p {
   grid-template-areas:
     "box1 box2 box3"
     "box4 box5 box3"
-    "box4 box5 box6"
-    "box4 box7 box7"
-    "box4 box7 box7";
+    "box4 box5 box6";
 }
 
 .grid-item {
@@ -382,11 +380,7 @@ nav p {
   background-color: none;
 }
 
-.grid-item-7 {
-  grid-area: box7;
-}
-
-.grid-item-7 img {
+.grid-item-3 img {
   height: 100%;
   width: 100%;
   padding: 1em;
@@ -437,7 +431,7 @@ nav p {
 
 /*---------------------ABOUT ME-------------------*/
 .about-me {
-  margin-top: 50em;
+  margin-top: 20em;
   position: relative;
   height: 630px;
   width: 100%;
