@@ -850,8 +850,16 @@ button:hover .fa-arrow-right {
 }
 
 /*----------------------Media queries-----------------------*/
+/* Add these updated media queries to your existing styles.css */
+/* Replace your existing @media (max-width: 600px) section with this improved version */
 
 @media (max-width: 600px) {
+  /* Navigation fixes */
+  .navigation {
+    width: 95vw;
+    margin: 0.6em 0.5em;
+  }
+
   .nav-links {
     opacity: 0;
     z-index: 11;
@@ -866,6 +874,8 @@ button:hover .fa-arrow-right {
     gap: 2em;
     pointer-events: none;
     padding-left: 1em;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
   }
 
   .nav-ani {
@@ -878,12 +888,15 @@ button:hover .fa-arrow-right {
 
   .menu-icon {
     display: block;
-    margin: 0 1em 1em 0;
+    margin: 0 0.5em 0 0;
     transition: 0.3s;
   }
+
+  /* Hero section - keeping your original mobile styles */
   .hero {
     height: 500px;
   }
+
   .hello-txt {
     font-size: 1em;
   }
@@ -938,125 +951,251 @@ button:hover .fa-arrow-right {
     margin-top: 5em;
   }
 
+  /* Footer/ticker fixes */
+  .footer {
+    height: 150px;
+    margin-top: 2em;
+  }
+
   .stock-ticker {
-    font-size: 1.8em;
+    font-size: 1.5em;
+  }
+
+  .stock-ticker ul {
+    gap: 30px;
+  }
+
+  /* Work section fixes */
+  .working {
+    height: auto;
+    margin-top: 2em;
+    padding: 1em 0;
   }
 
   .workprojects {
-    padding: 0.5em;
+    height: auto;
+    width: 95vw;
+    gap: 0.8em;
     grid-template-areas:
-      "box1 box3"
-      "box2 box3"
-      "box4 box5"
-      "box6 box7"
-      "box8 box8";
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5"
+      "box6";
+  }
+
+  .grid-item {
+    min-height: 250px;
   }
 
   .grid-item-1 {
-    font-size: 1em;
+    font-size: 1.8em;
+    min-height: 120px;
+    padding: 1em;
   }
+
+  .grid-item h2 {
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+  }
+
+  .projects-manuals {
+    margin: 0.5em 0.5em;
+  }
+
   .view-project {
-    font-size: 9px;
-    width: 5em;
+    font-size: 11px;
+    padding: 0.5em 0.8em;
   }
+
   .fa-question {
-    padding: 0.8em 1em;
-    font-size: 0.7em;
+    padding: 0.6em 0.75em;
+    font-size: 0.8em;
   }
+
+  /* About section fixes */
   .about-me {
-    margin-top: 10em;
+    margin-top: 8em;
+    height: auto;
   }
+
   .about-field {
+    height: auto;
+    width: 95vw;
+    gap: 0.8em;
     grid-template-areas:
-      "box1 box1"
-      "box2 box4"
-      "box3 box3";
-    /* "box4 box4"; */
+      "box1"
+      "box2"
+      "box3"
+      "box4";
+  }
+
+  .gridItem {
+    padding: 1em;
   }
 
   .gridItem h2 {
-    font-size: 1.1em;
+    font-size: 1em;
+    margin-bottom: 0.5em;
   }
 
   .grid-item1 {
-    font-size: 0.7em;
+    font-size: 0.85em;
+    line-height: 1.4em;
+  }
+
+  .grid-item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .grid-item2 img {
     object-fit: cover;
-    width: 200px;
-    height: 290px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3/4;
   }
 
   .grid-item3 ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+    padding-left: 1.5em;
+    font-size: 0.9em;
   }
 
   .grid-item4 {
-    font-size: 0.5em;
+    min-height: 150px;
   }
 
+  .aboutBtn {
+    font-size: 1.5em;
+  }
+
+  /* Contact section fixes */
   .contact-me {
-    margin-top: 12em;
-    place-items: center;
+    margin-top: 8em;
+    height: auto;
+    padding-bottom: 3em;
   }
 
   .contact-me h1 {
-    font-size: 2.2em;
+    font-size: 1.8em;
+    padding: 0 1em;
+    text-align: center;
   }
 
   .dash {
-    padding-left: 1.5em;
+    padding-left: 1em;
+    gap: 1em;
   }
 
   .dash i {
-    font-size: 2em;
-  }
-
-  .dash p {
-    font-size: 0.5em;
+    font-size: 1.5em;
   }
 
   .dash .line {
-    width: 12em;
+    width: 8em;
+    margin-top: 1.1em;
+  }
+
+  .dash p {
+    font-size: 0.7em;
+    padding: 0.3em 0.5em;
   }
 
   .cols {
-    display: grid;
-    grid-template-columns: 1, 1fr;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+  }
+
+  .right-col {
+    margin: 2em 0 1em 0;
+    width: 100%;
+    order: 1;
   }
 
   form {
-    width: 90%;
-    padding: 1em;
+    width: 100%;
+    padding: 1.5em;
+  }
+
+  .contact-inputs {
+    width: 100%;
+    max-width: 100%;
+    height: 3em;
+    margin-bottom: 1em;
   }
 
   .right-col textarea {
-    width: 20em;
+    width: 100%;
+    max-width: 100%;
+    height: 150px;
+    margin-top: 1em;
   }
 
-  .fa-star {
-    display: none;
-    opacity: 0;
+  .right-col button {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 1em;
   }
 
+  .left-col {
+    height: 350px;
+    margin-top: 2em;
+    order: 2;
+    position: relative;
+  }
+
+  .circleBadge {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+
+  .logoBadge {
+    width: 200px;
+    height: 200px;
+  }
+
+  .textBadge {
+    font-size: 0.8em;
+  }
+
+  .textBadge span {
+    transform-origin: 0 125px;
+  }
+
+  .fa-star,
   .f2 {
     display: none;
-    opacity: 0;
   }
 
+  /* Animation adjustments for mobile */
   @keyframes fishy {
     0% {
       margin-left: 1.4em;
     }
-
     50% {
       margin-left: -0.3em;
     }
-
     100% {
       margin-left: 1.4em;
     }
+  }
+}
+
+/* Add extra small screen support for iPhone SE and similar */
+@media (max-width: 375px) {
+  .stock-ticker {
+    font-size: 1.2em;
+  }
+
+  .contact-me h1 {
+    font-size: 1.5em;
   }
 }
