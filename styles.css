@@ -46,15 +46,17 @@
 nav {
   position: fixed;
   z-index: 7;
+  height: 2.5em;
+  /* border: 1px solid black; */
 }
 
 .navigation {
   height: 30px;
-  width: 98vw;
+  width: 99vw;
   background-color: #d5d5d5;
   position: relative;
   font-family: gotham-reg;
-  margin: 0.6em 0.8em 0em 0.8em;
+  padding: 0.6em 0.8em 0em 0.8em;
   display: flex;
   justify-content: space-between;
 }
@@ -80,6 +82,7 @@ nav p {
   border-radius: 50%;
   border: 1px solid black;
   animation: spin 7s infinite ease-in-out;
+  cursor: pointer;
 }
 
 .menu-icon {
@@ -279,7 +282,6 @@ nav p {
 .workprojects {
   height: 500px;
   font-family: gothamB;
-
   width: 95vw;
   display: grid;
   grid-auto-columns: 1fr;
@@ -305,11 +307,8 @@ nav p {
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0.75rem;
   cursor: pointer;
+  padding-bottom: 0.2em;
 }
-
-/* .grid-item:hover {
-  background-color: rgba(137, 43, 226, 0.122);
-} */
 
 .grid-item h2 {
   margin-bottom: 0.5em;
@@ -324,7 +323,6 @@ nav p {
   font-weight: 900;
   place-content: center;
   padding: 0em;
-  border: none;
   box-shadow: none;
 }
 
@@ -339,11 +337,12 @@ nav p {
 .grid-item-2 {
   grid-area: box2;
 }
-
-.grid-item-2 img {
+.grid-item img {
+  border: 1px solid black;
   height: 100%;
   width: 100%;
-  padding: 1em;
+  border-radius: 0.6em;
+  transform: scale(0.9);
   object-fit: cover;
   background-color: none;
 }
@@ -360,32 +359,8 @@ nav p {
   grid-area: box5;
 }
 
-.grid-item-5 img {
-  height: 100%;
-  width: 100%;
-  padding: 1em;
-  object-fit: cover;
-  background-color: none;
-}
-
 .grid-item-6 {
   grid-area: box6;
-}
-
-.grid-item-6 img {
-  height: 100%;
-  width: 100%;
-  padding: 1em;
-  object-fit: cover;
-  background-color: none;
-}
-
-.grid-item-3 img {
-  height: 100%;
-  width: 100%;
-  padding: 1em;
-  object-fit: cover;
-  background-color: none;
 }
 
 .grid-item-8 {
@@ -397,20 +372,49 @@ nav p {
   font-size: 1em;
 }
 .projects-manuals {
-  margin: 0.8em 0.3em;
+  margin: 0.3em 0.3em;
+
   display: flex;
   justify-content: space-between;
 }
+.projects-manuals ul {
+  display: flex;
+
+  place-items: center;
+  gap: 0.2em;
+  list-style: none;
+}
+.projects-manuals li {
+  width: fit-content;
+  padding: 0 0.5em 0 0.5em;
+  height: 2.3em;
+  font-size: 12px;
+  place-content: center;
+  text-decoration: none;
+  /* color: rgb(245, 241, 232); */
+  /* background-color: orangered; */
+  border: 1px solid black;
+  border-radius: 0.2em;
+}
 .view-project {
+  background-color: #1e1e1e;
+  color: #e3e3e3;
+
   box-shadow: none;
-  padding: 0.6em;
+  width: 98%;
+
   cursor: pointer;
-  border: #000 1px solid;
-  transition: 0.8s ease;
+  border: none;
+  transition: 0.3s ease;
+  border-radius: 0.4em;
+  height: 3em;
+}
+.view-project i {
+  background-color: transparent;
 }
 .view-project:hover {
   color: #e3e3e3;
-  background-color: #1e1e1e;
+  background-color: #353535;
   border: none;
 }
 .fa-question {
@@ -428,10 +432,58 @@ nav p {
 .mainviewport p {
   position: absolute;
 }
+/*---------------------TOOLS----------------------*/
+.tools {
+  height: 25em;
+  /* 
+  border: 1px solid black; */
+  margin-top: 20em;
+}
+.tools h1 {
+  font-size: 3.1em;
+  font-family: gothambook;
+  text-align: center;
+}
 
+.toolIcons {
+  margin-top: 5em;
+
+  height: 10em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.toolIcons .tIcons {
+  border-radius: 0.75em;
+  background-color: red;
+  height: 4em;
+  width: 4em;
+}
+
+.tools .toggleSkills {
+  display: flex;
+  font-family: gothambook;
+  justify-content: center;
+  gap: 1em;
+}
+.toggleSkills div {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 0.75em;
+  border: 1px solid black;
+  padding: 0.5em 1.9em;
+  cursor: pointer;
+}
+.toggleSkills div:hover {
+  background-color: #3c3c3c;
+}
+.toggleSkills p {
+  padding: 0.5em 1.9em;
+}
 /*---------------------ABOUT ME-------------------*/
 .about-me {
-  margin-top: 20em;
+  margin-top: 10em;
   position: relative;
   height: 630px;
   width: 100%;
@@ -564,7 +616,13 @@ form {
   border-radius: 0.75em;
   padding: 2em;
 }
-
+form input {
+  padding-left: 0.5em;
+}
+form textarea {
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
 .right-col button {
   width: 10em;
   height: 3em;
