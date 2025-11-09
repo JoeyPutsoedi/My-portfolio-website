@@ -309,7 +309,19 @@ nav p {
   cursor: pointer;
   padding-bottom: 0.2em;
 }
-
+.grid-item #show {
+  padding: 0.4em 0.7em;
+  border: 1px solid #1e1e1e;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.8s ease;
+  font-weight: bold;
+  font-size: 1em;
+}
+.grid-item #show:hover {
+  color: #e3e3e3;
+  background-color: #1e1e1e;
+}
 .grid-item h2 {
   margin-bottom: 0.5em;
 }
@@ -417,20 +429,41 @@ nav p {
   background-color: #353535;
   border: none;
 }
-.fa-question {
-  padding: 0.5em 0.7em 0.5em 0.7em;
-  border: 1px solid #1e1e1e;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.8s ease;
-}
 
-.fa-question:hover {
-  color: #e3e3e3;
-  background-color: #1e1e1e;
+.fa-question {
+  background-color: transparent;
 }
 .mainviewport p {
   position: absolute;
+}
+.infomatic {
+  display: none;
+  padding: 1em;
+  position: absolute;
+  z-index: 200;
+  height: 22.5em;
+  width: 26.5em;
+  background-color: #e3e3e3;
+  border-radius: 0.5em;
+  transition: 0.4s ease;
+}
+.infomatic .infoText {
+  background-color: green;
+  height: 18em;
+  width: 100%;
+}
+.infomatic button {
+  display: block;
+  background-color: #1e1e1e;
+  margin-top: 0.5em;
+  color: #e3e3e3;
+  box-shadow: none;
+  width: 20%;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease;
+  border-radius: 0.4em;
+  height: 2.5em;
 }
 /*---------------------TOOLS----------------------*/
 .tools {
@@ -444,42 +477,78 @@ nav p {
   font-family: gothambook;
   text-align: center;
 }
-
 .toolIcons {
-  margin-top: 5em;
-
-  height: 10em;
   display: flex;
   justify-content: center;
-  gap: 1em;
+  /* border: 1px solid black; */
+  margin-top: 5em;
+  height: 10em;
 }
 
+.caurel-track {
+  width: 28em;
+  height: 6em;
+  /* border: 1px solid red; */
+  overflow: hidden;
+  white-space: nowrap;
+}
 .toolIcons .tIcons {
+  display: inline-block;
+  margin-right: 1em;
   border-radius: 0.75em;
-  background-color: red;
-  height: 4em;
-  width: 4em;
+  background-color: #1e1e1e;
+  height: 6em;
+  width: 6em;
+  text-align: center;
+  place-content: center;
+  cursor: pointer;
+  transition: 0.5s ease;
 }
+.toolIcons .tIcons:hover {
+  background-color: #2a2835;
+  transition: 0.4s ease-in-out;
+}
+.tIcons {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.tIcons p {
+  padding-top: 0.4em;
+  background-color: transparent;
+  font-family: gothambook;
+  font-size: 10px;
+}
+.tIcons i {
+  font-size: 2.5em;
 
+  background-color: transparent;
+}
+.tIcons img {
+  width: 2.4em;
+  height: 2.4em;
+  object-fit: cover;
+  background-color: transparent;
+}
 .tools .toggleSkills {
   display: flex;
   font-family: gothambook;
   justify-content: center;
   gap: 1em;
 }
-.toggleSkills div {
+.toggleSkills button {
   background-color: #1e1e1e;
   color: white;
   border-radius: 0.75em;
   border: 1px solid black;
-  padding: 0.5em 1.9em;
+  padding: 0.8em 1.9em;
   cursor: pointer;
 }
-.toggleSkills div:hover {
+.toggleSkills button:hover {
   background-color: #3c3c3c;
 }
 .toggleSkills p {
-  padding: 0.5em 1.9em;
+  padding: 0.8em 1.9em;
 }
 /*---------------------ABOUT ME-------------------*/
 .about-me {
@@ -778,482 +847,4 @@ button:hover .fa-arrow-right {
   background-color: #1e1e1e;
   z-index: 18;
   position: absolute;
-}
-
-/*------------------------------Animations--------------------------*/
-@keyframes appear {
-  from {
-    opacity: 0;
-    /* scale: 0.5; */
-    clip-path: inset(100% 100% 0 0);
-  }
-  to {
-    opacity: 1;
-    /* scale: 1; */
-    clip-path: inset(0 0 0 0);
-  }
-}
-@keyframes appear2 {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
-@keyframes bannerScroll {
-  to {
-    transform: translateX(calc(-100% - 50px));
-  }
-}
-
-@keyframes spin {
-  0% {
-    /* transform: rotate(0deg); */
-    background-color: none;
-    border: 1px solid black;
-  }
-
-  50% {
-    /* transform: rotate(180deg); */
-    background-color: #1e1e1e;
-    border: 1px solid black;
-    color: #d5d5d5;
-  }
-
-  100% {
-    /* transform: rotate(0deg); */
-    background-color: none;
-    border: 1px solid black;
-  }
-}
-
-@keyframes scrolleft {
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes lok {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  50% {
-    transform: rotate(45deg);
-  }
-
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes arrowPad {
-  from {
-    padding: 0.1em 0.1em;
-  }
-}
-
-@keyframes hello {
-  0% {
-    letter-spacing: 2.5em;
-  }
-
-  25% {
-    letter-spacing: 1em;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: bolder;
-  }
-
-  50% {
-    letter-spacing: 2em;
-    font-family: gotham;
-  }
-}
-
-@keyframes fishy {
-  0% {
-    margin-left: 0.4em;
-  }
-
-  50% {
-    margin-left: -0.3em;
-  }
-
-  100% {
-    margin-left: 0.4em;
-  }
-}
-
-@keyframes arrow {
-  0% {
-    padding-right: 0;
-  }
-
-  50% {
-    padding-right: 1em;
-  }
-
-  100% {
-    padding-right: 0;
-  }
-}
-
-@keyframes rotateText {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/*----------------------Media queries-----------------------*/
-/* Add these updated media queries to your existing styles.css */
-/* Replace your existing @media (max-width: 600px) section with this improved version */
-
-@media (max-width: 600px) {
-  /* Navigation fixes */
-  .navigation {
-    width: 95vw;
-    margin: 0.6em 0.5em;
-  }
-
-  .nav-links {
-    opacity: 0;
-    z-index: 11;
-    position: absolute;
-    height: 200px;
-    width: 200px;
-    top: 30px;
-    right: 1px;
-    display: flex;
-    flex-direction: column;
-    background-color: #d5d5d5;
-    gap: 2em;
-    pointer-events: none;
-    padding-left: 1em;
-    border: 1px solid #1e1e1e;
-    border-radius: 8px;
-  }
-
-  .nav-ani {
-    display: none;
-  }
-
-  .nav-links a {
-    font-size: 1.1em;
-  }
-
-  .menu-icon {
-    display: block;
-    margin: 0 0.5em 0 0;
-    transition: 0.3s;
-  }
-
-  /* Hero section - keeping your original mobile styles */
-  .hero {
-    height: 500px;
-  }
-
-  .hello-txt {
-    font-size: 1em;
-  }
-
-  .orange-ball {
-    height: 50px;
-    width: 50px;
-    margin-left: 3.1em;
-    margin-top: 1.5em;
-  }
-
-  .fa-arrow-right-long {
-    font-size: 1em;
-    transform: rotate(50deg);
-    margin-top: 4.4em;
-    margin-left: 6em;
-  }
-
-  .intro {
-    font-size: 3em;
-    margin-left: 2em;
-    margin-top: 2.4em;
-  }
-
-  .fa-burst {
-    font-size: 6em;
-    margin-top: 1.1em;
-    margin-left: 1.2em;
-  }
-
-  .fa-arrow-turn-down {
-    font-size: 3em;
-    margin-left: 1.3em;
-    margin-top: 3.4em;
-    transform: rotateY(180deg);
-  }
-
-  .name {
-    font-size: 1.7em;
-    margin-top: 8em;
-    margin-left: -0.5em;
-  }
-
-  .name-prof {
-    font-size: 0.9em;
-    margin-left: -1em;
-    margin-top: 20.5em;
-  }
-
-  .fish2 {
-    font-size: 4em;
-    margin-top: 5em;
-  }
-
-  /* Footer/ticker fixes */
-  .footer {
-    height: 150px;
-    margin-top: 2em;
-  }
-
-  .stock-ticker {
-    font-size: 1.5em;
-  }
-
-  .stock-ticker ul {
-    gap: 30px;
-  }
-
-  /* Work section fixes */
-  .working {
-    height: auto;
-    margin-top: 2em;
-    padding: 1em 0;
-  }
-
-  .workprojects {
-    height: auto;
-    width: 95vw;
-    gap: 0.8em;
-    grid-template-areas:
-      "box1"
-      "box2"
-      "box3"
-      "box4"
-      "box5"
-      "box6";
-  }
-
-  .grid-item {
-    min-height: 250px;
-  }
-
-  .grid-item-1 {
-    font-size: 1.8em;
-    min-height: 120px;
-    padding: 1em;
-  }
-
-  .grid-item h2 {
-    font-size: 0.9em;
-    margin-bottom: 0.3em;
-  }
-
-  .projects-manuals {
-    margin: 0.5em 0.5em;
-  }
-
-  .view-project {
-    font-size: 11px;
-    padding: 0.5em 0.8em;
-  }
-
-  .fa-question {
-    padding: 0.6em 0.75em;
-    font-size: 0.8em;
-  }
-
-  /* About section fixes */
-  .about-me {
-    margin-top: 8em;
-    height: auto;
-  }
-
-  .about-field {
-    height: auto;
-    width: 95vw;
-    gap: 0.8em;
-    grid-template-areas:
-      "box1"
-      "box2"
-      "box3"
-      "box4";
-  }
-
-  .gridItem {
-    padding: 1em;
-  }
-
-  .gridItem h2 {
-    font-size: 1em;
-    margin-bottom: 0.5em;
-  }
-
-  .grid-item1 {
-    font-size: 0.85em;
-    line-height: 1.4em;
-  }
-
-  .grid-item2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .grid-item2 img {
-    object-fit: cover;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 3/4;
-  }
-
-  .grid-item3 ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5em;
-    padding-left: 1.5em;
-    font-size: 0.9em;
-  }
-
-  .grid-item4 {
-    min-height: 150px;
-  }
-
-  .aboutBtn {
-    font-size: 1.5em;
-  }
-
-  /* Contact section fixes */
-  .contact-me {
-    margin-top: 8em;
-    height: auto;
-    padding-bottom: 3em;
-  }
-
-  .contact-me h1 {
-    font-size: 1.8em;
-    padding: 0 1em;
-    text-align: center;
-  }
-
-  .dash {
-    padding-left: 1em;
-    gap: 1em;
-  }
-
-  .dash i {
-    font-size: 1.5em;
-  }
-
-  .dash .line {
-    width: 8em;
-    margin-top: 1.1em;
-  }
-
-  .dash p {
-    font-size: 0.7em;
-    padding: 0.3em 0.5em;
-  }
-
-  .cols {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1em;
-  }
-
-  .right-col {
-    margin: 2em 0 1em 0;
-    width: 100%;
-    order: 1;
-  }
-
-  form {
-    width: 100%;
-    padding: 1.5em;
-  }
-
-  .contact-inputs {
-    width: 100%;
-    max-width: 100%;
-    height: 3em;
-    margin-bottom: 1em;
-  }
-
-  .right-col textarea {
-    width: 100%;
-    max-width: 100%;
-    height: 150px;
-    margin-top: 1em;
-  }
-
-  .right-col button {
-    width: 100%;
-    max-width: 200px;
-    margin-top: 1em;
-  }
-
-  .left-col {
-    height: 350px;
-    margin-top: 2em;
-    order: 2;
-    position: relative;
-  }
-
-  .circleBadge {
-    width: 250px;
-    height: 250px;
-    position: relative;
-  }
-
-  .logoBadge {
-    width: 200px;
-    height: 200px;
-  }
-
-  .textBadge {
-    font-size: 0.8em;
-  }
-
-  .textBadge span {
-    transform-origin: 0 125px;
-  }
-
-  .fa-star,
-  .f2 {
-    display: none;
-  }
-
-  /* Animation adjustments for mobile */
-  @keyframes fishy {
-    0% {
-      margin-left: 1.4em;
-    }
-    50% {
-      margin-left: -0.3em;
-    }
-    100% {
-      margin-left: 1.4em;
-    }
-  }
-}
-
-/* Add extra small screen support for iPhone SE and similar */
-@media (max-width: 375px) {
-  .stock-ticker {
-    font-size: 1.2em;
-  }
-
-  .contact-me h1 {
-    font-size: 1.5em;
-  }
 }

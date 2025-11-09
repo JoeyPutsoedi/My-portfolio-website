@@ -1,0 +1,126 @@
+/*------------------------------Animations--------------------------*/
+@keyframes appear {
+  from {
+    opacity: 0;
+    /* scale: 0.5; */
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    /* scale: 1; */
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes appear2 {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes bannerScroll {
+  to {
+    transform: translateX(calc(-100% - 50px));
+  }
+}
+
+@keyframes spin {
+  0% {
+    /* transform: rotate(0deg); */
+    background-color: none;
+    border: 1px solid black;
+  }
+
+  50% {
+    /* transform: rotate(180deg); */
+    background-color: #1e1e1e;
+    border: 1px solid black;
+    color: #d5d5d5;
+  }
+
+  100% {
+    /* transform: rotate(0deg); */
+    background-color: none;
+    border: 1px solid black;
+  }
+}
+
+@keyframes scrolleft {
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes lok {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes arrowPad {
+  from {
+    padding: 0.1em 0.1em;
+  }
+}
+
+@keyframes hello {
+  0% {
+    letter-spacing: 2.5em;
+  }
+
+  25% {
+    letter-spacing: 1em;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bolder;
+  }
+
+  50% {
+    letter-spacing: 2em;
+    font-family: gotham;
+  }
+}
+
+@keyframes fishy {
+  0% {
+    margin-left: 0.4em;
+  }
+
+  50% {
+    margin-left: -0.3em;
+  }
+
+  100% {
+    margin-left: 0.4em;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    padding-right: 0;
+  }
+
+  50% {
+    padding-right: 1em;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+
+@keyframes rotateText {
+  to {
+    transform: rotate(360deg);
+  }
+}

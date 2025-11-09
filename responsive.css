@@ -1,0 +1,374 @@
+/*----------------------Media queries-----------------------*/
+
+@media (max-width: 600px) {
+  /*------------------------------- Navigation ----------------------------------*/
+  .navigation {
+    width: 95vw;
+  }
+
+  .nav-links {
+    opacity: 0;
+    z-index: 11;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 30px;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+    background-color: #d5d5d5;
+    gap: 2em;
+    pointer-events: none;
+    padding-left: 1em;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+  }
+
+  .nav-ani {
+    display: none;
+  }
+
+  .nav-links a {
+    font-size: 1.1em;
+  }
+
+  .menu-icon {
+    display: block;
+    margin: 0 0 0 0;
+    transition: 0.3s;
+  }
+  #menuList {
+    padding: 1.8em 1em;
+    width: 9em;
+    font-size: 11px;
+    top: 2.8em;
+    gap: 0.6em;
+    height: 13em;
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+  }
+  /*-------------------------------------- Hero section-----------------------------*/
+  .hero {
+    height: 500px;
+  }
+
+  .hello-txt {
+    font-size: 1em;
+  }
+
+  .orange-ball {
+    height: 50px;
+    width: 50px;
+    margin-left: 3.1em;
+    margin-top: 1.5em;
+  }
+
+  .fa-arrow-right-long {
+    font-size: 1em;
+    transform: rotate(50deg);
+    margin-top: 4.4em;
+    margin-left: 6em;
+  }
+
+  .intro {
+    font-size: 3em;
+    margin-left: 2em;
+    margin-top: 2.4em;
+  }
+
+  .fa-burst {
+    font-size: 6em;
+    margin-top: 1.1em;
+    margin-left: 1.2em;
+  }
+
+  .fa-arrow-turn-down {
+    font-size: 3em;
+    margin-left: 1.3em;
+    margin-top: 3.4em;
+    transform: rotateY(180deg);
+  }
+
+  .name {
+    font-size: 1.7em;
+    margin-top: 8em;
+    margin-left: -0.5em;
+  }
+
+  .name-prof {
+    font-size: 0.9em;
+    margin-left: -1em;
+    margin-top: 20.5em;
+  }
+
+  .fish2 {
+    font-size: 4em;
+    margin-top: 5em;
+  }
+
+  /* Footer/ticker fixes */
+  .footer {
+    height: 150px;
+    margin-top: 2em;
+  }
+
+  .stock-ticker {
+    font-size: 1.5em;
+  }
+
+  .stock-ticker ul {
+    gap: 30px;
+  }
+
+  /* Work section fixes */
+  .working {
+    height: auto;
+    margin-top: 2em;
+    padding: 1em 0;
+  }
+
+  .workprojects {
+    height: auto;
+    width: 95vw;
+    gap: 0.8em;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5"
+      "box6";
+  }
+
+  .grid-item {
+    min-height: 250px;
+  }
+
+  .grid-item-1 {
+    font-size: 1.8em;
+    min-height: 120px;
+    padding: 1em;
+  }
+
+  .grid-item h2 {
+    font-size: 0.9em;
+    margin-bottom: 0.3em;
+  }
+
+  .projects-manuals {
+    margin: 0.5em 0.5em;
+  }
+
+  .view-project {
+    font-size: 11px;
+    padding: 0.5em 0.8em;
+  }
+
+  .fa-question {
+    padding: 0.6em 0.75em;
+    font-size: 0.8em;
+  }
+
+  /* About section fixes */
+  .about-me {
+    margin-top: 8em;
+    height: auto;
+  }
+
+  .about-field {
+    height: auto;
+    width: 95vw;
+    gap: 0.8em;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4";
+  }
+
+  .gridItem {
+    padding: 1em;
+  }
+
+  .gridItem h2 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .grid-item1 {
+    font-size: 0.85em;
+    line-height: 1.4em;
+  }
+
+  .grid-item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-item2 img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3/4;
+  }
+
+  .grid-item3 ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+    padding-left: 1.5em;
+    font-size: 0.9em;
+  }
+
+  .grid-item4 {
+    min-height: 150px;
+  }
+  /*------------------------TOOLS-----------------------*/
+  .tools {
+    margin-top: 13em;
+  }
+  .tools h1 {
+    width: 6em;
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 1px solid red; */
+    font-size: 2em;
+    overflow-wrap: break-word;
+  }
+  .caurel-track {
+    width: 21em;
+    margin-left: 1.1em;
+    /* border: 1px solid red; */
+  }
+  .aboutBtn {
+    font-size: 1.5em;
+  }
+
+  /* Contact section fixes */
+  .contact-me {
+    margin-top: 8em;
+    height: auto;
+    padding-bottom: 3em;
+  }
+
+  .contact-me h1 {
+    font-size: 1.8em;
+    padding: 0 1em;
+    text-align: center;
+  }
+
+  .dash {
+    justify-content: center;
+    padding-left: 1em;
+    gap: 1em;
+  }
+
+  .dash i {
+    font-size: 1.5em;
+  }
+
+  .dash .line {
+    width: 8em;
+    margin-top: 1.1em;
+  }
+
+  .dash p {
+    font-size: 0.7em;
+    padding: 0.3em 0.5em;
+  }
+
+  .cols {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+  }
+
+  .right-col {
+    margin: 2em 0 1em 0;
+    width: 100%;
+    order: 1;
+  }
+
+  form {
+    width: 100%;
+    padding: 1.5em;
+  }
+
+  .contact-inputs {
+    width: 100%;
+    max-width: 100%;
+    height: 3em;
+    margin-bottom: 1em;
+  }
+
+  .right-col textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 150px;
+    margin-top: 1em;
+  }
+
+  .right-col button {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1em;
+  }
+
+  .left-col {
+    height: 350px;
+    margin-top: 2em;
+    order: 2;
+    position: relative;
+  }
+
+  .circleBadge {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+
+  .logoBadge {
+    width: 200px;
+    height: 200px;
+  }
+
+  .textBadge {
+    font-size: 0.8em;
+  }
+
+  .textBadge span {
+    transform-origin: 0 125px;
+  }
+
+  .fa-star,
+  .f2 {
+    display: none;
+  }
+
+  /* Animation adjustments for mobile */
+  @keyframes fishy {
+    0% {
+      margin-left: 1.4em;
+    }
+    50% {
+      margin-left: -0.3em;
+    }
+    100% {
+      margin-left: 1.4em;
+    }
+  }
+}
+
+/* Add extra small screen support for iPhone SE and similar */
+@media (max-width: 375px) {
+  .stock-ticker {
+    font-size: 1.2em;
+  }
+
+  .contact-me h1 {
+    font-size: 1.5em;
+  }
+}
