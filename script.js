@@ -38,3 +38,45 @@ aboutBttn.onmouseout = () => {
     items.src = "images/10.jpg";
   });
 };
+/*-----------------------------tools scroll-----------------------*/
+var position = 0;
+
+function moveCarousel(direction) {
+  if (direction == `backward`) {
+    if (position == 0) {
+      return false;
+    }
+    position--;
+  }
+  if (direction == `forward`) {
+    if (window.innerWidth <= 1024) {
+      if (position == 6) {
+        return false;
+      }
+    } else {
+      if (position == 5) {
+        return false;
+      }
+    }
+
+    position++;
+  }
+
+  const offset = 115 * position;
+  const items = document.querySelectorAll(".tIcons");
+
+  items.forEach((item) => {
+    item.style.transform = `translateX(-${offset}px)`;
+  });
+}
+
+/*---------------------Infomatic section---------------------- */
+const info = document.querySelector(".infomatic");
+
+function closeButton() {
+  info.style.display = "none";
+}
+function showButton() {
+  info.style.transition = "0.4s";
+  info.style.display = "block";
+}
