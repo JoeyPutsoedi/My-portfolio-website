@@ -71,12 +71,61 @@ function moveCarousel(direction) {
 }
 
 /*---------------------Infomatic section---------------------- */
-const info = document.querySelector(".infomatic");
+const info1 = document.querySelector(".info-1");
+const info2 = document.querySelector(".info-2");
+const info3 = document.querySelector(".info-3");
+const info4 = document.querySelector(".info-4");
+const info5 = document.querySelector(".info-5");
 
-function closeButton() {
-  info.style.display = "none";
+function closeButton(prop) {
+  switch (prop) {
+    case `one`:
+      info1.style.display = "none";
+      break;
+
+    case `two`:
+      info2.style.display = "none";
+      break;
+
+    case `three`:
+      info3.style.display = "none";
+      break;
+
+    case `four`:
+      info4.style.display = "none";
+      break;
+
+    case `five`:
+      info5.style.display = "none";
+      break;
+  }
 }
-function showButton() {
-  info.style.transition = "0.4s";
-  info.style.display = "block";
+
+function renderContent(prop) {
+  switch (prop) {
+    case `one`:
+      info1.style.transition = "0.4s";
+      info1.style.display = "block";
+      break;
+
+    case `two`:
+      info2.style.transition = "0.4s";
+      info2.style.display = "block";
+      break;
+
+    case `three`:
+      info3.style.transition = "0.4s";
+      info3.style.display = "block";
+      break;
+
+    case `four`:
+      info4.style.transition = "0.4s";
+      info4.style.display = "block";
+      break;
+
+    case `five`:
+      info5.style.transition = "0.4s";
+      info5.style.display = "block";
+      break;
+  }
 }
