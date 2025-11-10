@@ -310,6 +310,7 @@ nav p {
   padding-bottom: 0.2em;
 }
 .grid-item #show {
+  color: #1e1e1e;
   padding: 0.4em 0.7em;
   border: 1px solid #1e1e1e;
   border-radius: 50%;
@@ -445,7 +446,7 @@ nav p {
   width: 26.5em;
   background-color: #e3e3e3;
   border-radius: 0.5em;
-  transition: 0.4s ease;
+  transition: display 0.7s ease;
 }
 .infomatic .infoText {
   background-color: green;
@@ -553,15 +554,17 @@ nav p {
 /*---------------------ABOUT ME-------------------*/
 .about-me {
   margin-top: 10em;
-  position: relative;
+
   height: 630px;
+  max-height: 750px;
   width: 100%;
   display: grid;
   place-content: center;
+  font-family: gothambook;
 }
 
 .about-field {
-  height: 630px;
+  height: 600px;
   font-family: gothamB;
   margin-bottom: 1em;
   width: 95vw;
@@ -569,9 +572,9 @@ nav p {
   grid-auto-columns: 1fr;
   grid-template-areas:
     "box1 box1 box2"
-    "box1 box1 box2"
-    "box3 box4 box2"
-    "box3 box4 box2";
+    "box3 box3 box2"
+    "box3 box3 box2"
+    "box3 box3 box2";
 }
 
 .gridItem {
@@ -596,7 +599,8 @@ nav p {
 .grid-item2 img {
   object-fit: cover;
   width: 400px;
-  height: 580px;
+  height: 560px;
+
   transition: 6s ease;
 }
 
@@ -604,8 +608,8 @@ nav p {
   grid-area: box3;
 }
 
-.grid-item3 ul {
-  padding: 0.4em 0em 0em 3em;
+.grid-item3 h2 {
+  margin-bottom: 0.3em;
 }
 
 .grid-item4 {
@@ -628,10 +632,61 @@ nav p {
   color: #d5d5d5;
 }
 
+.faqItem {
+  margin: 0.3em;
+  max-height: 15em;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 1.2em;
+  padding: 0.3em 0.6em 0.3em 0.7em;
+}
+.faqItem .question {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.question i {
+  font-size: 1em;
+  color: #e3e3e3;
+  background-color: #000;
+  border: 1px solid black;
+  padding: 0.5em 0.6em;
+  transition: 0.7s ease;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.question p {
+  background-color: transparent;
+}
+.answer {
+  transition: 0.7s ease;
+  max-height: 0em;
+  overflow: hidden;
+  background-color: transparent;
+}
+.answer p {
+  background-color: transparent;
+  margin-top: 1em;
+  margin-left: 1.2em;
+}
+.faqItem.active {
+  background-color: #000;
+  color: white;
+}
+.faqItem.active i {
+  background-color: #e3e3e3;
+  color: black;
+  transform: rotate(45deg);
+}
+.faqItem.active .answer {
+  max-height: 15em;
+  color: #e3e3e3;
+}
+
 /*---------------------Contact ME-------------------*/
 .contact-me {
-  margin-top: 8em;
-  position: relative;
+  margin-top: 20em;
+
   height: 630px;
   width: 100%;
 }
@@ -645,6 +700,7 @@ nav p {
 
 .dash {
   display: flex;
+  justify-content: center;
   gap: 2em;
   padding-left: 5em;
 }
