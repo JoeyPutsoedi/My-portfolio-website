@@ -102,13 +102,13 @@
             <p id="have">Have a look</p>
             <p>at<br />my work!</p>
           </div>
-
+          <!-----------------------Grid item 1-------------------------------------------------------->
           <div class="grid-item grid-item-2">
             <h2>Featured Project</h2>
             <!---------Info section---------->
-            <div class="infomatic">
+            <div class="infomatic info-1">
               <div class="infoText"></div>
-              <button id="closebttn" onclick="closeButton()">Close</button>
+              <button id="closebttn" onclick="closeButton(`one`)">Close</button>
             </div>
             <!---------Image section---------->
             <img src="images/Greekbod.png" alt="" />
@@ -120,7 +120,7 @@
                 <li>NodeJs</li>
                 <li>Spoonacular API</li>
               </ul>
-              <button id="show" onclick="showButton()">
+              <button id="show" class="show-1" onclick="renderContent(`one`)">
                 <i class="fa-solid fa-question"></i>
               </button>
             </div>
@@ -129,13 +129,15 @@
                 View Project <i class="fa-solid fa-link"></i></button
             ></a>
           </div>
-
+          <!-----------------------Grid item 2-------------------------------------------------------->
           <div class="grid-item grid-item-3">
             <h2>Featured Project</h2>
             <!---------Info section---------->
-            <div class="infomatic">
+            <div class="infomatic info-2">
               <div class="infoText"></div>
-              <button id="closebttn" onclick="closeButton()">Close</button>
+              <button id="closebttn " onclick="closeButton(`two`)">
+                Close
+              </button>
             </div>
             <!---------Image section---------->
             <img src="footage/rori.png" alt="" />
@@ -145,7 +147,7 @@
                 <li>ReactJs</li>
                 <li>NodeJs</li>
               </ul>
-              <button id="show" onclick="showButton()">
+              <button id="show" class="show-2" onclick="renderContent(`two`)">
                 <i class="fa-solid fa-question"></i>
               </button>
             </div>
@@ -155,18 +157,15 @@
                 View Project <i class="fa-solid fa-link"></i></button
             ></a>
           </div>
-
+          <!-----------------------Grid item 3-------------------------------------------------------->
           <div class="grid-item grid-item-4">
             <h2>Featured Project</h2>
-            <div class="aoi"></div>
-          </div>
-
-          <div class="grid-item grid-item-5">
-            <h2>Featured Project</h2>
             <!---------Info section---------->
-            <div class="infomatic">
+            <div class="infomatic info-3">
               <div class="infoText"></div>
-              <button id="closebttn" onclick="closeButton()">Close</button>
+              <button id="closebttn" onclick="closeButton(`three`)">
+                Close
+              </button>
             </div>
             <!---------Image section---------->
             <img src="footage/cut.png" alt="" />
@@ -176,7 +175,7 @@
                 <li>C#</li>
                 <li>ASP.NET Core</li>
               </ul>
-              <button id="show" onclick="showButton()">
+              <button id="show" class="show-3" onclick="renderContent(`three`)">
                 <i class="fa-solid fa-question"></i>
               </button>
             </div>
@@ -186,13 +185,43 @@
                 View Project <i class="fa-solid fa-link"></i></button
             ></a>
           </div>
-
+          <!-----------------------Grid item 4-------------------------------------------------------->
+          <div class="grid-item grid-item-5">
+            <h2>Featured Project</h2>
+            <!---------Info section---------->
+            <div class="infomatic info-4">
+              <div class="infoText"></div>
+              <button id="closebttn" onclick="closeButton(`four`)">
+                Close
+              </button>
+            </div>
+            <!---------Image section---------->
+            <img src="footage/cut.png" alt="" />
+            <div class="projects-manuals">
+              <!---------Languages section---------->
+              <ul>
+                <li>C#</li>
+                <li>ASP.NET Core</li>
+              </ul>
+              <button id="show" class="show-4" onclick="renderContent(`four`)">
+                <i class="fa-solid fa-question"></i>
+              </button>
+            </div>
+            <!---------Button section---------->
+            <a href="https://creativerori.online/" target="_blank"
+              ><button class="view-project">
+                View Project <i class="fa-solid fa-link"></i></button
+            ></a>
+          </div>
+          <!-----------------------Grid item 5-------------------------------------------------------->
           <div class="grid-item grid-item-6">
             <h2>Featured Project</h2>
             <!---------Info section---------->
-            <div class="infomatic">
+            <div class="infomatic info-5">
               <div class="infoText"></div>
-              <button id="closebttn" onclick="closeButton()">Close</button>
+              <button id="closebttn" onclick="closeButton(`five`)">
+                Close
+              </button>
             </div>
             <!---------Image section---------->
             <img src="footage/5star.png" alt="" />
@@ -203,10 +232,11 @@
                 <li>C#</li>
                 <li>ASP.NET Core</li>
               </ul>
-              <button id="show" onclick="showButton()">
+              <button id="show" class="show-5" onclick="renderContent(`five`)">
                 <i class="fa-solid fa-question"></i>
               </button>
             </div>
+            <!---------Button section---------->
             <a
               href="https://fivestarquestionnairee.netlify.app/"
               target="_blank"
