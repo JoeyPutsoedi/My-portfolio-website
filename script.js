@@ -26,18 +26,6 @@ function toggleMenu() {
   }
 }
 
-aboutBttn.onmouseover = () => {
-  aboutGrids.forEach((items) => {
-    items.style.transition = "3.5s";
-    items.src = "images/10-O.jpg";
-  });
-};
-aboutBttn.onmouseout = () => {
-  aboutGrids.forEach((items) => {
-    items.style.transition = "1.5s";
-    items.src = "images/10.jpg";
-  });
-};
 /*-----------------------------tools scroll-----------------------*/
 var position = 0;
 
@@ -104,28 +92,32 @@ function closeButton(prop) {
 function renderContent(prop) {
   switch (prop) {
     case `one`:
-      info1.style.transition = "0.4s";
       info1.style.display = "block";
       break;
 
     case `two`:
-      info2.style.transition = "0.4s";
       info2.style.display = "block";
       break;
 
     case `three`:
-      info3.style.transition = "0.4s";
       info3.style.display = "block";
       break;
 
     case `four`:
-      info4.style.transition = "0.4s";
       info4.style.display = "block";
       break;
 
     case `five`:
-      info5.style.transition = "0.4s";
       info5.style.display = "block";
       break;
   }
 }
+
+/*-------------------About Section-----------------------------*/
+const faqs = document.querySelectorAll(".faqItem");
+
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    faq.classList.toggle("active");
+  });
+});

@@ -145,6 +145,9 @@
     min-height: 250px;
   }
 
+  .grid-item #show {
+    padding: 0em 0.1em;
+  }
   .grid-item-1 {
     font-size: 1.8em;
     min-height: 120px;
@@ -169,10 +172,32 @@
     padding: 0.6em 0.75em;
     font-size: 0.8em;
   }
+  .infomatic {
+    left: -1%;
+    margin-top: -1em;
+    transform: scale(0.9);
+  }
 
+  /*------------------------TOOLS-----------------------*/
+  .tools {
+    margin-top: 13em;
+  }
+  .tools h1 {
+    width: 6em;
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 1px solid red; */
+    font-size: 2em;
+    overflow-wrap: break-word;
+  }
+  .caurel-track {
+    width: 21em;
+    margin-left: 1.1em;
+    /* border: 1px solid red; */
+  }
   /* About section fixes */
   .about-me {
-    margin-top: 8em;
+    margin-top: 16em;
     height: auto;
   }
 
@@ -183,8 +208,7 @@
     grid-template-areas:
       "box1"
       "box2"
-      "box3"
-      "box4";
+      "box3";
   }
 
   .gridItem {
@@ -226,22 +250,15 @@
   .grid-item4 {
     min-height: 150px;
   }
-  /*------------------------TOOLS-----------------------*/
-  .tools {
-    margin-top: 13em;
-  }
-  .tools h1 {
-    width: 6em;
-    margin-right: auto;
-    margin-left: auto;
-    /* border: 1px solid red; */
-    font-size: 2em;
-    overflow-wrap: break-word;
-  }
-  .caurel-track {
-    width: 21em;
-    margin-left: 1.1em;
-    /* border: 1px solid red; */
+
+  .faqItem {
+    margin: 0.3em;
+    max-height: 15em;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 1.2em;
+    padding: 0.3em 0.6em 0.3em 0.7em;
+    font-size: 12px;
   }
   .aboutBtn {
     font-size: 1.5em;
@@ -249,7 +266,7 @@
 
   /* Contact section fixes */
   .contact-me {
-    margin-top: 8em;
+    margin-top: 15em;
     height: auto;
     padding-bottom: 3em;
   }
@@ -363,12 +380,17 @@
 }
 
 /* Add extra small screen support for iPhone SE and similar */
-@media (max-width: 375px) {
+@media (max-width: 390px) {
   .stock-ticker {
     font-size: 1.2em;
   }
 
   .contact-me h1 {
     font-size: 1.5em;
+  }
+  .infomatic {
+    left: -8%;
+    margin-top: -2em;
+    transform: scale(0.8);
   }
 }
