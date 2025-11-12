@@ -27,12 +27,32 @@
   font-family: gothbold;
   src: url(./Gotham/Gotham-Bold.otf);
 }
-
+:root {
+  --base-color: #1e1e1e;
+  --primary-color: #d5d5d5;
+  --box-shadow: rgba(0, 0, 0, 0.5);
+  --box-shadow2: rgba(0, 0, 0, 0.2);
+  --border: rgba(255, 255, 255, 0.25);
+  --border-top: rgba(255, 255, 255, 0.5);
+  --about-border: rgba(40, 40, 40, 0.2);
+  --hover-view-bkg: #353535;
+}
+.darkMode {
+  transition: 0.5s ease;
+  --primary-color: #1e1e1e;
+  --base-color: #d5d5d5;
+  --box-shadow: rgba(255, 255, 255, 0.5);
+  --box-shadow2: rgba(255, 255, 255, 0.2);
+  --border: rgba(0, 0, 0, 0.25);
+  --border-top: rgba(0, 0, 0, 0.5);
+  --about-border: rgba(215, 215, 215, 0.2);
+  --hover-view-bkg: #fefefe;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #d5d5d5;
+  background-color: var(--primary-color);
   scroll-behavior: smooth;
 }
 
@@ -53,7 +73,7 @@ nav {
 .navigation {
   height: 30px;
   width: 99vw;
-  background-color: #d5d5d5;
+  background-color: var(--primary-color);
   position: relative;
   font-family: gotham-reg;
   padding: 0.6em 0.8em 0em 0.8em;
@@ -63,7 +83,7 @@ nav {
 
 nav a {
   font-size: 0.8em;
-  color: black;
+  color: var(--base-color);
   text-decoration: none;
 }
 
@@ -73,28 +93,33 @@ nav a {
 }
 
 nav p {
+  color: var(--base-color);
   font-size: 0.8em;
 }
 
 .fish1 {
+  color: var(--base-color);
   font-size: 0.8em;
   padding: 0.4em 0.5em;
   border-radius: 50%;
-  border: 1px solid black;
-  animation: spin 7s infinite ease-in-out;
+  border: 1px solid var(--base-color);
+  /* animation: spin 7s infinite ease-in-out; */
   cursor: pointer;
 }
 
 .menu-icon {
   display: none;
   font-size: 1.3em;
+  color: var(--base-color);
 }
-
+.resTog {
+  display: none;
+}
 /*---------------------HERO SECTION-------------------*/
 .hero {
   background-color: #1e1e1e;
   position: relative;
-
+  border: 1px solid var(--base-color);
   height: 550px;
   width: 90vw;
   max-width: 100%;
@@ -248,7 +273,7 @@ nav p {
   font-family: gotham-bold;
   font-size: 3.2em;
   padding-block: 10px;
-  border-block: 1px solid;
+  border-block: 1px solid var(--base-color);
   overflow: hidden;
   user-select: none;
   display: flex;
@@ -256,6 +281,7 @@ nav p {
 }
 
 .stock-ticker ul {
+  color: var(--base-color);
   list-style: none;
   flex-shrink: 0;
   min-width: 100%;
@@ -301,18 +327,20 @@ nav p {
   text-align: center;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  box-shadow: 0 15px 25px var(--box-shadow);
+  border: 1px solid var(--base-color);
+  border-top: 1px solid var(--base-color);
+  border-left: 1px solid var(--base-color);
   border-radius: 0.75rem;
   cursor: pointer;
   padding-bottom: 0.2em;
 }
 .grid-item #show {
-  color: #1e1e1e;
+  color: var(--base-color);
   padding: 0.4em 0.7em;
-  border: 1px solid #1e1e1e;
+  border: 1px solid var(--base-color);
   border-radius: 50%;
   cursor: pointer;
   transition: 0.8s ease;
@@ -320,8 +348,8 @@ nav p {
   font-size: 1em;
 }
 .grid-item #show:hover {
-  color: #e3e3e3;
-  background-color: #1e1e1e;
+  color: var(--primary-color);
+  background-color: var(--base-color);
 }
 .grid-item h2 {
   margin-bottom: 0.5em;
@@ -330,7 +358,7 @@ nav p {
 .grid-item-1 {
   grid-area: box1;
   cursor: default;
-  background-color: #d5d5d5;
+  background-color: var(--primary-color);
   font-size: 1.7em;
   line-height: 0.9em;
   font-weight: 900;
@@ -351,7 +379,7 @@ nav p {
   grid-area: box2;
 }
 .grid-item img {
-  border: 1px solid black;
+  border: 1px solid var(--base-color);
   height: 100%;
   width: 100%;
   border-radius: 0.6em;
@@ -386,13 +414,13 @@ nav p {
 }
 .projects-manuals {
   margin: 0.3em 0.3em;
-
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
 }
 .projects-manuals ul {
   display: flex;
-
+  background-color: var(--primary-color);
   place-items: center;
   gap: 0.2em;
   list-style: none;
@@ -404,18 +432,23 @@ nav p {
   font-size: 12px;
   place-content: center;
   text-decoration: none;
+  background-color: var(--primary-color);
   /* color: rgb(245, 241, 232); */
   /* background-color: orangered; */
-  border: 1px solid black;
+  border: 1px solid var(--base-color);
   border-radius: 0.2em;
 }
+.grid-item a {
+  background-color: transparent;
+}
+.grid-item p {
+  background-color: transparent;
+}
 .view-project {
-  background-color: #1e1e1e;
-  color: #e3e3e3;
-
+  background-color: var(--base-color);
+  color: var(--primary-color);
   box-shadow: none;
   width: 98%;
-
   cursor: pointer;
   border: none;
   transition: 0.3s ease;
@@ -426,8 +459,8 @@ nav p {
   background-color: transparent;
 }
 .view-project:hover {
-  color: #e3e3e3;
-  background-color: #353535;
+  color: var(--primary-color);
+  background-color: var(--hover-view-bkg);
   border: none;
 }
 
@@ -449,7 +482,7 @@ nav p {
   transition: display 0.7s ease;
 }
 .infomatic .infoText {
-  background-color: green;
+  background-color: transparent;
   height: 18em;
   width: 100%;
 }
@@ -474,6 +507,7 @@ nav p {
   margin-top: 20em;
 }
 .tools h1 {
+  color: var(--base-color);
   font-size: 3.1em;
   font-family: gothambook;
   text-align: center;
@@ -487,8 +521,8 @@ nav p {
 }
 
 .caurel-track {
-  width: 28em;
-  height: 6em;
+  width: 28.5em;
+  height: 6.5em;
   /* border: 1px solid red; */
   overflow: hidden;
   white-space: nowrap;
@@ -498,6 +532,7 @@ nav p {
   margin-right: 1em;
   border-radius: 0.75em;
   background-color: #1e1e1e;
+  border: 1px solid var(--base-color);
   height: 6em;
   width: 6em;
   text-align: center;
@@ -512,7 +547,7 @@ nav p {
 .tIcons {
   display: flex;
   flex-direction: row;
-  color: white;
+  color: #d5d5d5;
 }
 .tIcons p {
   padding-top: 0.4em;
@@ -539,9 +574,9 @@ nav p {
 }
 .toggleSkills button {
   background-color: #1e1e1e;
-  color: white;
+  color: #d5d5d5;
   border-radius: 0.75em;
-  border: 1px solid black;
+  border: 1px solid var(--base-color);
   padding: 0.8em 1.9em;
   cursor: pointer;
 }
@@ -554,7 +589,6 @@ nav p {
 /*---------------------ABOUT ME-------------------*/
 .about-me {
   margin-top: 10em;
-
   height: 630px;
   max-height: 750px;
   width: 100%;
@@ -578,16 +612,24 @@ nav p {
 }
 
 .gridItem {
+  background-color: var(--primary-color);
   animation-duration: 2s;
+  color: var(--base-color);
   animation: appear2 linear;
   animation-timeline: view();
   animation-range: entry 0 cover 30%;
   padding: 0.5em 1em;
   display: flex;
   flex-direction: column;
-  border: 0.1px solid rgba(40, 40, 40, 0.2);
+  border: 0.1px solid var(--about-border);
 }
 
+.gridItem h2 {
+  background-color: transparent;
+}
+.gridItem p {
+  background-color: transparent;
+}
 .grid-item1 {
   grid-area: box1;
 }
@@ -619,26 +661,14 @@ nav p {
   text-align: center;
 }
 
-.aboutBtn {
-  font-size: 1.9em;
-  padding: 0.8em 0.3em;
-  border: 2px solid #1e1e1e;
-  border-radius: 50%;
-  transition: 1.6s;
-}
-
-.aboutBtn:hover {
-  background: #1e1e1e;
-  color: #d5d5d5;
-}
-
 .faqItem {
   margin: 0.3em;
   max-height: 15em;
   width: 80%;
-  border: 1px solid black;
+  border: 1px solid var(--base-color);
   border-radius: 1.2em;
   padding: 0.3em 0.6em 0.3em 0.7em;
+  background-color: transparent;
 }
 .faqItem .question {
   display: flex;
@@ -647,9 +677,9 @@ nav p {
 }
 .question i {
   font-size: 1em;
-  color: #e3e3e3;
-  background-color: #000;
-  border: 1px solid black;
+  color: var(--primary-color);
+  background-color: var(--base-color);
+  border: 1px solid var(--base-color);
   padding: 0.5em 0.6em;
   transition: 0.7s ease;
   cursor: pointer;
@@ -670,17 +700,17 @@ nav p {
   margin-left: 1.2em;
 }
 .faqItem.active {
-  background-color: #000;
-  color: white;
+  background-color: var(--base-color);
+  color: var(--primary-color);
 }
 .faqItem.active i {
-  background-color: #e3e3e3;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--base-color);
   transform: rotate(45deg);
 }
 .faqItem.active .answer {
   max-height: 15em;
-  color: #e3e3e3;
+  color: var(--primary-color);
 }
 
 /*---------------------Contact ME-------------------*/
@@ -696,6 +726,7 @@ nav p {
   font-size: 3.1em;
   font-family: gothambook;
   margin-bottom: 0.2em;
+  color: var(--base-color);
 }
 
 .dash {
@@ -703,6 +734,7 @@ nav p {
   justify-content: center;
   gap: 2em;
   padding-left: 5em;
+  color: var(--base-color);
 }
 
 .dash i {
@@ -715,7 +747,7 @@ nav p {
   height: 2px;
   width: 16em;
   border-radius: 2px;
-  background-color: #1e1e1e;
+  background-color: var(--base-color);
 }
 
 .dash p {
@@ -737,7 +769,7 @@ nav p {
 }
 
 form {
-  border: 1px solid #1e1e1eb7;
+  border: 1px solid var(--base-color);
   border-radius: 0.75em;
   padding: 2em;
 }
@@ -752,8 +784,8 @@ form textarea {
   width: 10em;
   height: 3em;
   border-radius: 25px;
-  border: solid 1px #000;
-  color: black;
+  border: solid 1px var(--base-color);
+  color: var(--base-color);
   font-family: gothambook;
   font-weight: 900;
   font-size: 13px;
@@ -787,8 +819,8 @@ button:hover .fa-arrow-right {
   width: 17rem;
   height: 4em;
   border: none;
-  border-bottom: solid 1px #000;
-  color: #000;
+  border-bottom: solid 1px var(--base-color);
+  color: var(--base-color);
   background-color: transparent;
 }
 
@@ -809,7 +841,7 @@ button:hover .fa-arrow-right {
   height: 300px;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid #1e1e1e;
+  border: 1px solid var(--base-color);
   display: flex;
   justify-content: center;
   place-items: center;
@@ -817,14 +849,14 @@ button:hover .fa-arrow-right {
 
 .logoBadge {
   position: absolute;
-  border: 1px solid #1e1e1e;
+  border: 1px solid var(--base-color);
   width: 250px;
   height: 250px;
   display: flex;
   justify-content: center;
   border-radius: 50%;
   place-items: center;
-  background-color: #d5d5d5;
+  background-color: var(--primary-color);
   font-size: 0.6em;
 }
 
@@ -837,6 +869,7 @@ button:hover .fa-arrow-right {
 }
 
 .textBadge span {
+  color: var(--base-color);
   position: absolute;
   background-color: transparent;
   left: 50%;
@@ -851,6 +884,7 @@ button:hover .fa-arrow-right {
   font-size: 6em;
   top: 12%;
   left: 12%;
+  color: var(--base-color);
 }
 
 .f2 {
@@ -900,7 +934,7 @@ button:hover .fa-arrow-right {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 2em;
-  background-color: #1e1e1e;
+  background-color: var(--base-color);
   z-index: 18;
   position: absolute;
 }
