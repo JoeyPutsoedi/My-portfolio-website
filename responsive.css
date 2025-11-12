@@ -3,25 +3,22 @@
 @media (max-width: 600px) {
   /*------------------------------- Navigation ----------------------------------*/
   .navigation {
-    width: 95vw;
+    width: 97vw;
   }
 
   .nav-links {
     opacity: 0;
     z-index: 11;
     position: absolute;
-    height: 200px;
-    width: 200px;
+    width: 100%;
     top: 30px;
     right: 1px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     background-color: #d5d5d5;
-    gap: 2em;
+    gap: 0.9em;
     pointer-events: none;
     padding-left: 1em;
-    border: 1px solid #1e1e1e;
-    border-radius: 8px;
   }
 
   .nav-ani {
@@ -29,24 +26,121 @@
   }
 
   .nav-links a {
-    font-size: 1.1em;
+    font-size: 0.9em;
+    text-align: center;
+    color: #1e1e1e;
+    place-content: center;
+    /* border: 1px solid black; */
+    background-color: rgb(228, 216, 228);
+    /* border-left: 1px solid white; */
+    border-bottom: 1px solid white;
+    width: 11em;
+    height: 3em;
+    border-radius: 1em;
   }
 
   .menu-icon {
     display: block;
-    margin: 0 0 0 0;
+
     transition: 0.3s;
   }
-  #menuList {
-    padding: 1.8em 1em;
-    width: 9em;
+  .nav-center {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    place-items: center;
+    font-family: gothamB;
+    font-weight: 700;
+    background-color: rgb(205, 196, 205);
+    border-radius: 0.8em;
+    width: 100%;
+    height: 6.5em;
+    padding: 1em;
+  }
+  .resTog {
+    display: block;
+    position: absolute;
+
+    height: 10em;
+    /* background-color: orange; */
+    top: 9.5em;
+    padding: 0 1em;
+    width: 100%;
+  }
+  .resTog #res {
+    font-family: gothamB;
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .resTog .square {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .square span {
+    background-color: transparent;
+  }
+  .resTog .dark {
+    position: relative;
+    margin-top: 0.3em;
+    background-color: rgb(205, 196, 205);
+    width: 18em;
+    height: 8em;
+    border-radius: 0.8em;
+    cursor: pointer;
+  }
+  .dark i {
+    color: rgb(126, 47, 127);
+    background-color: transparent;
+    font-size: 1.8em;
+    padding-top: 1.2em;
+    padding-left: 0.6em;
+  }
+  .dark p {
+    color: rgb(53, 31, 74);
+    font-weight: 700;
+    padding-top: 1.5em;
+    padding-left: 1em;
+    background-color: transparent;
     font-size: 11px;
-    top: 2.8em;
+  }
+  .resTog .light {
+    position: relative;
+    margin-top: 0.3em;
+    background-color: rgb(204, 205, 196);
+    width: 18em;
+    height: 8em;
+    border-radius: 0.8em;
+    cursor: pointer;
+  }
+  .light i {
+    color: rgb(108, 127, 47);
+    background-color: transparent;
+    font-size: 1.8em;
+    padding-top: 1.2em;
+    padding-left: 0.6em;
+  }
+  .light p {
+    color: rgb(64, 74, 31);
+    font-weight: 700;
+    padding-top: 1.5em;
+    padding-left: 1em;
+    background-color: transparent;
+    font-size: 11px;
+  }
+  #menuList {
+    border-radius: 0%;
+    background-color: var(--primary-color);
+    padding: 1.8em 1em;
+    width: 100%;
+    margin-right: 0;
+    font-size: 11px;
+    top: 3.5em;
     gap: 0.6em;
-    height: 13em;
-    border-bottom: none;
-    border-right: none;
-    border-top: none;
+    height: 20em;
+    box-shadow: -15px 9px 25px var(--box-shadow2);
+    border: none;
+    border-top: 1px solid var(--about-border);
   }
   /*-------------------------------------- Hero section-----------------------------*/
   .hero {
@@ -255,7 +349,7 @@
     margin: 0.3em;
     max-height: 15em;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid var(--base-color);
     border-radius: 1.2em;
     padding: 0.3em 0.6em 0.3em 0.7em;
     font-size: 12px;

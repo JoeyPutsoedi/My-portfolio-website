@@ -23,6 +23,7 @@ function toggleMenu() {
     menuList.style.opacity = "0";
     ikon.style.transform = "rotate(0deg)";
     ikon.style.transition = "0.4s";
+    menuList.style.pointerEvents = "none";
   }
 }
 
@@ -119,5 +120,48 @@ const faqs = document.querySelectorAll(".faqItem");
 faqs.forEach((faq) => {
   faq.addEventListener("click", () => {
     faq.classList.toggle("active");
+  });
+});
+
+/*-------------------Dark Mode-------------------------------- */
+let darkmode = localStorage.getItem("darkmode");
+const switcher = document.querySelector("#theme-switcher");
+const mobileSwitcher = document.querySelectorAll(".mobile");
+const darkText = document.querySelector("#dark-text");
+const lightText = document.querySelector("#light-text");
+
+const enableDarkMode = () => {
+  document.body.style.transition = "0.7s ease";
+  document.body.classList.add("darkMode");
+  localStorage.setItem("darkmode", "active");
+  darkText.innerText = "On";
+  lightText.innerText = "Off";
+};
+
+const disableDarkMode = () => {
+  document.body.style.transition = "0.7s ease";
+  document.body.classList.remove("darkMode");
+  localStorage.setItem("darkmode", null);
+  darkText.innerText = "Off";
+  lightText.innerText = "On";
+};
+
+if (darkmode === "active") enableDarkMode();
+
+switcher.addEventListener("click", () => {
+  darkmode = localStorage.getItem("darkmode");
+
+  darkmode !== "active" ? enableDarkMode() : disableDarkMode();
+
+  console.log("darkmode:", darkmode);
+});
+
+mobileSwitcher.forEach((m) => {
+  m.addEventListener("click", () => {
+    darkmode = localStorage.getItem("darkmode");
+
+    darkmode !== "active" ? enableDarkMode() : disableDarkMode();
+
+    console.log("darkmode:", darkmode);
   });
 });
