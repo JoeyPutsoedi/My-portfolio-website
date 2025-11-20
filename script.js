@@ -29,6 +29,20 @@ function toggleMenu() {
 
 /*-----------------------------tools scroll-----------------------*/
 var position = 0;
+setInterval(() => {
+  // If at the last position, reset back to 0 smoothly
+  if (window.innerWidth <= 1024) {
+    if (position >= 6) {
+      position = -1; // -1 so next iteration becomes 0
+    }
+  } else {
+    if (position >= 5) {
+      position = -1;
+    }
+  }
+
+  moveCarousel("forward");
+}, 3000);
 
 function moveCarousel(direction) {
   if (direction == `backward`) {

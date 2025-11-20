@@ -475,8 +475,8 @@ nav p {
   padding: 1em;
   position: absolute;
   z-index: 200;
-  height: 22.5em;
-  width: 26.5em;
+  height: 22.3em;
+  width: 26.3em;
   background-color: #e3e3e3;
   border-radius: 0.5em;
   transition: display 0.7s ease;
@@ -485,11 +485,13 @@ nav p {
   background-color: transparent;
   height: 18em;
   width: 100%;
+  font-size: 13px;
 }
 .infomatic button {
   display: block;
   background-color: #1e1e1e;
-  margin-top: 0.5em;
+
+  margin-top: 4.5em;
   color: #e3e3e3;
   box-shadow: none;
   width: 20%;
