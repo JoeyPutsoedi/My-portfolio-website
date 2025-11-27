@@ -602,6 +602,7 @@ nav p {
   flex-direction: column;
 }
 .downloadBttn a {
+  border: 1px solid var(--base-color);
   background-color: #1e1e1e;
   color: white;
   font-family: gothambook;
