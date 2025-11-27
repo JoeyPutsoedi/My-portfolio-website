@@ -91,7 +91,10 @@ nav a {
   display: flex;
   gap: 1em;
 }
-
+.nav-center {
+  display: flex;
+  gap: 1em;
+}
 nav p {
   color: var(--base-color);
   font-size: 0.8em;
@@ -573,6 +576,7 @@ nav p {
   font-family: gothambook;
   justify-content: center;
   gap: 1em;
+  margin-bottom: 4em;
 }
 .toggleSkills button {
   background-color: #1e1e1e;
@@ -588,9 +592,26 @@ nav p {
 .toggleSkills p {
   padding: 0.8em 1.9em;
 }
+.tools .downloadBttn {
+  color: black;
+  height: 6em;
+
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+}
+.downloadBttn a {
+  background-color: #1e1e1e;
+  color: white;
+  font-family: gothambook;
+  text-decoration: none;
+  padding: 0.7em 2em;
+  border-radius: 0.8em;
+}
 /*---------------------ABOUT ME-------------------*/
 .about-me {
-  margin-top: 10em;
+  margin-top: 15em;
   height: 630px;
   max-height: 750px;
   width: 100%;
