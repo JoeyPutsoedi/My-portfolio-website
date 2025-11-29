@@ -340,20 +340,6 @@ nav p {
   cursor: pointer;
   padding-bottom: 0.2em;
 }
-.grid-item #show {
-  color: var(--base-color);
-  padding: 0.4em 0.7em;
-  border: 1px solid var(--base-color);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.8s ease;
-  font-weight: bold;
-  font-size: 1em;
-}
-.grid-item #show:hover {
-  color: var(--primary-color);
-  background-color: var(--base-color);
-}
 .grid-item h2 {
   margin-bottom: 0.5em;
 }
@@ -441,6 +427,21 @@ nav p {
   border: 1px solid var(--base-color);
   border-radius: 0.2em;
 }
+.grid-item #show {
+  color: var(--base-color);
+  padding: 0.4em 0.7em;
+  border: 1px solid var(--base-color);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.8s ease;
+  font-weight: bold;
+  font-size: 1em;
+}
+.grid-item #show:hover {
+  color: var(--primary-color);
+  background-color: var(--base-color);
+}
+
 .grid-item a {
   background-color: transparent;
 }
@@ -473,6 +474,7 @@ nav p {
 .mainviewport p {
   position: absolute;
 }
+/*-----------------------Infomatic-----------------------*/
 .infomatic {
   display: none;
   padding: 1em;
@@ -489,12 +491,32 @@ nav p {
   height: 18em;
   width: 100%;
   font-size: 13px;
+  color: black;
+}
+.infomatic .info-buttons {
+  background-color: transparent;
+  display: flex;
+  gap: 1em;
+  margin-top: 3em;
+}
+.info-buttons #show1 {
+  color: white;
+  padding: 0.4em 0.7em;
+
+  background-color: #1e1e1e;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.8s ease;
+  font-weight: bold;
+  font-size: 1em;
+}
+.info-buttons i {
+  background-color: transparent;
 }
 .infomatic button {
   display: block;
   background-color: #1e1e1e;
-
-  margin-top: 4.5em;
+  /* margin-top: 4.5em; */
   color: #e3e3e3;
   box-shadow: none;
   width: 20%;
