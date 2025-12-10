@@ -53,11 +53,11 @@ function moveCarousel(direction) {
   }
   if (direction == `forward`) {
     if (window.innerWidth <= 1024) {
-      if (position == 6) {
+      if (position == 7) {
         return false;
       }
     } else {
-      if (position == 5) {
+      if (position == 6) {
         return false;
       }
     }
